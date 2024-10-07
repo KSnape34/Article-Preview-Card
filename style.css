@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+:root{
+    --dark-gray-blue: hsl(217, 19%, 35%);
+    --dark-blue: hsl(214, 17%, 51%);
+    --gray-blue: hsl(212, 23%, 69%);
+    --light-gray-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+
+    --fw-500: 500;
+    --fw-700: 700;
+
+    --fs-13: 13px;
+}
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img, i{
+    display: block;
+}
+
+html{
+    font-family: 'Manrope', sans-serif;
+    font-weight: var(--fw-500);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-gray-blue);
+    padding: 20px;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 280px 450px;
+    grid-template-rows: 300px;
+  }
+  
+  .left{
+    background-image: url('./images/drawers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .right{
+    padding: 0 2.5rem;
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .right h3{
+    font-weight: var(--fw-500);
+    color: var(--dark-gray-blue);
+    margin: 2.5rem 0 1rem 0;
+  }
+  
+  .right p{
+    font-weight: var(--fw-500);
+    color: var(--dark-gray-blue);
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .author{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .author_img{
+    border-radius: 50%;
+    width: 50px;
+  }
+  
+  .share_image{
+    background-color: var(--light-gray-blue);
+    border-radius: 50%;
+    width: 30px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .name_date{
+    display: flex;
+    flex-direction: column;
+    margin-left:5px;
+  }
+  
+  .name_date .name{
+    font-size: 0.8rem;
+  }
+  
+  .name_date .date{
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--dark-gray-blue);
+  }
+  
+  .share_box{
+    width: 220px;
+    height: 50px;
+    background-color: var(--dark-gray-blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    position: absolute;
+    left: 250px;
+    bottom: 60px;
+  }
+  
+  .share_box > *{
+    margin-right: 0.8rem;
+  }
+  
+  .share_box:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--dark-gray-blue) transparent transparent transparent;
+    content: "";
+    position: absolute;
+    right: 105px;
+    top: 50px;
+  }
+  .share_box span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--gray-blue);
+  }
+  
+  .hidden{
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    body{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px;
+    }
+    .left{
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: unset;
+    }
+    .right{
+      border-top-right-radius: unset;
+      border-bottom-left-radius: 15px;
+    }
+    .author{
+      margin-bottom: 1rem;
+    }
+    .share_image{
+      z-index: 5;
+    }
+    .share_box{
+      width: 363px;
+      height: 80px;
+      background-color: var(--dark-gray-blue);
+      border-radius: 0 0 10px 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: #fff;
+      position: absolute;
+      left: -39px;
+      bottom: -15px;
+    }
+    .hidden{
+      display: none;
+    }
+    .share_box:before {
+      display: none;
+    }
+    .share_box span{
+      margin-left: 2rem;
+    }
+  }
