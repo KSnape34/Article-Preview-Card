@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Article Preview Card](https://github.com/user-attachments/assets/5f9b2466-4d60-4064-b2ce-0ceac995f738)
+![Article Preview Card](https://github.com/user-attachments/assets/8179ab99-36eb-49ce-a898-87d429add273)
 
 
 ### Links
